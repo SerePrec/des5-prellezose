@@ -1,9 +1,9 @@
-const Contenedor = require("../models/contenedor");
+import Contenedor from "../src/models/Contenedor.js";
 
 async function cargaInicial() {
   try {
     // Instancio e inicializo el contenedor productos
-    const productos = new Contenedor("productos.txt");
+    const productos = new Contenedor("productos.json");
     await productos.init();
 
     //Guardo 5 elementos en productos

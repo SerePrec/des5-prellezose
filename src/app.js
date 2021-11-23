@@ -1,7 +1,10 @@
-const express = require("express");
+import express from "express";
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
+import productosRouter from "./routes/productos.js";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
-const productosRouter = require("./routes/productos");
-const path = require("path");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -14,4 +17,4 @@ app.use((req, res, next) => {
   <h2 style="color:red;text-align:center;width:100%;">⚠️ Error 404: no existe el recurso</h2>`);
 });
 
-module.exports = app;
+export default app;

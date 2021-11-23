@@ -56,4 +56,5 @@ const validatePutBody = (req, res, next) => {
     next();
   }
 };
-module.exports = { validateId, validatePostBody, validatePutBody };
+
+export { validateId, validatePostBody, validatePutBody };

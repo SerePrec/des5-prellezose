@@ -1,9 +1,10 @@
-const app = require("./app");
+import app from "./app.js";
 const PORT = process.env.PORT || 8080;
 
 async function startServer() {
   //Inicializo mi "storage"
-  await require("./models/productos").init();
+  const { productosModel } = await import("./models/productos.js");
+  productosModel.init();
 
   const server = app.listen(PORT, () =>
     console.log(
