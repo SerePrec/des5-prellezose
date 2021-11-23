@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "nuevo título",
+    "price": 22.59,
+    "thumbnail": "http://prueba"
+  },
+  {
+    "id": 2,
+    "title": "producto 2",
+    "price": 22.59,
+    "thumbnail": "http://prueba"
+  },
+  {
+    "id": 4,
+    "title": "producto 4",
+    "price": 444.44,
+    "thumbnail": "http://pr4"
+  },
+  {
+    "id": 5,
+    "title": "Producto x",
+    "price": 2152.59,
+    "thumbnail": "http://prueba"
+  }
+]
