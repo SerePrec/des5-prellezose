@@ -34,5 +34,11 @@
     "title": "Agenda perpetua",
     "price": 342.88,
     "thumbnail": "https://cdn4.iconfinder.com/data/icons/back-to-school-151/64/planner-bookmark-diary-agenda-book-128.png"
+  },
+  {
+    "id": 7,
+    "title": "Lapicera de cartucho",
+    "price": 54,
+    "thumbnail": "https://cdn1.iconfinder.com/data/icons/neliku-office/128/yumminky-neliku-office-39-128.png"
   }
 ]

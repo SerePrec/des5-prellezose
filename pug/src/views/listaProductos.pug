@@ -1,0 +1,27 @@
+extends layouts/index.pug
+
+block content 
+  main.listado 
+    h2 PRODUCTOS CARGADOS
+    if list.length
+      table(class="table table-dark table-striped")
+        thead 
+          tr 
+            th(scope="col") id
+            th(scope="col") Título
+            th(scope="col") Precio
+            th(scope="col") Imágen
+        tbody 
+          each product in list
+            tr 
+              td= product.id 
+              td= product.title 
+              td $#{product.price} 
+              td
+                img(src=product.thumbnail class="table__image" alt="producto")
+    else 
+      div(class="container p-5 mb-4 bg-warning rounded-3")
+        div.py-5
+          h3(class="display-6 fw-bold") ¡Oops!, listado vacío
+          p No se encontraron productos cargados.
+    a(href="/" class="btn btn-success") CARGAR PRODUCTOS
