@@ -28,9 +28,7 @@ class Contenedor {
         console.log("Contenedor inicializado vacío");
       }
     } catch (error) {
-      console.log("Ocurrió un error al inicializar: ", error);
-      error.contenedor = true;
-      throw error;
+      throw new Error(`Error al inicializar: ${error}`);
     }
   }
 
@@ -46,9 +44,7 @@ class Contenedor {
       console.log("Elemento guardado con éxito");
       return producto;
     } catch (error) {
-      console.log("Error al guardar el elemento", error);
-      error.contenedor = true;
-      throw error;
+      throw new Error(`Error al guardar el elemento: ${error}`);
     }
   }
 
@@ -57,9 +53,7 @@ class Contenedor {
       const content = await fs.readFile(this.path, "utf-8");
       return JSON.parse(content);
     } catch (error) {
-      console.log("No se pudo recuperar archivo de datos");
-      error.contenedor = false;
-      throw error;
+      throw new Error(`No se pudo recuperar archivo de datos: ${error}`);
     }
   }
 
@@ -69,12 +63,7 @@ class Contenedor {
       const match = content.find(elem => elem.id == id);
       return !!match ? match : null;
     } catch (error) {
-      console.log(
-        `Ocurrió un error al obtener el elemento con id: ${id}: `,
-        error
-      );
-      error.contenedor = true;
-      throw error;
+      throw new Error(`Error al obtener el elemento con id '${id}': ${error}`);
     }
   }
 
@@ -100,12 +89,9 @@ class Contenedor {
         return null;
       }
     } catch (error) {
-      console.log(
-        `Ocurrió un error al actualizar el elemento con id: ${id}: `,
-        error
+      throw new Error(
+        `Error al actualizar el elemento con id '${id}': ${error}`
       );
-      error.contenedor = true;
-      throw error;
     }
   }
 
@@ -115,9 +101,7 @@ class Contenedor {
       console.log("Todos los elementos borrados con éxito");
       return true;
     } catch (error) {
-      console.log("Ocurrió un error al borrar todos los elementos", error);
-      error.contenedor = true;
-      throw error;
+      throw new Error(`Error al borrar todos los elementos: ${error}`);
     }
   }
 
@@ -135,12 +119,7 @@ class Contenedor {
         return null;
       }
     } catch (error) {
-      console.log(
-        `Ocurrió un error al eliminar el elemento con id: ${id}: `,
-        error
-      );
-      error.contenedor = true;
-      throw error;
+      throw new Error(`Error al borrar el elemento con id '${id}': ${error}`);
     }
   }
 }

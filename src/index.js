@@ -3,8 +3,12 @@ const PORT = process.env.PORT || 8080;
 
 async function startServer() {
   //Inicializo mi "storage"
-  const { productosModel } = await import("./models/productos.js");
-  productosModel.init();
+  try {
+    const { productosModel } = await import("./models/productos.js");
+    await productosModel.init();
+  } catch (error) {
+    console.log(error);
+  }
 
   const server = app.listen(PORT, () =>
     console.log(
