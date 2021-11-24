@@ -1,11 +1,12 @@
-import express from "express";
+import { Router } from "express";
 import { productosModel } from "../models/productos.js";
 import {
   validateId,
   validatePostBody,
   validatePutBody
 } from "../middelwares/validateData.js";
-const router = express.Router();
+
+const router = Router();
 
 router.get("/", async (req, res) => {
   try {
