@@ -7,7 +7,7 @@ const router = Router();
 router.get("/productos", async (req, res) => {
   try {
     const list = await productosModel.getAll();
-    res.render("listaProductos", { title: "Productos Cargados", list });
+    res.render("pages/listaProductos", { title: "Productos Cargados", list });
   } catch (error) {
     console.log(error);
     res.status(500).json({
