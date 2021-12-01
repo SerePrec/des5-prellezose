@@ -40,5 +40,11 @@
     "title": "Lapicera de cartucho",
     "price": 54,
     "thumbnail": "https://cdn1.iconfinder.com/data/icons/neliku-office/128/yumminky-neliku-office-39-128.png"
+  },
+  {
+    "id": 8,
+    "title": "Pegamento universal",
+    "price": 76,
+    "thumbnail": "https://cdn1.iconfinder.com/data/icons/office-things/136/glue_bottle-128.png"
   }
 ]
