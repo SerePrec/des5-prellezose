@@ -16,6 +16,9 @@ III) Manteniendo la misma funcionalidad reemplazar el motor de plantillas handle
 - En el caso de no encontrarse datos, mostrar el mensaje: 'No hay productos'.
 
 ### Ejecución
+El proyecto se encuentra estructurado en 3 carpetas diferentes con sus respectivos `package.json`.
+
+Cada carpeta corresponde al uso de un motor de plantillas diferente: `ejs`, `hbs` y`pug`.
 
 Luego de clonar o descargar el repositorio e instalar todas las dependencias con `npm install`, existen dos comandos para levantar el proyecto.
 Para levantarlo en modo de desarrollo junto a nodemon, utilizar `npm run dev`. De lo contrario, para ejecutarlo en "modo producción", utilizar `npm start`
