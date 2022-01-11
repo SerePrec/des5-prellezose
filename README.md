@@ -23,3 +23,6 @@ Cada carpeta corresponde al uso de un motor de plantillas diferente: `ejs`, `hbs
 
 Luego de clonar o descargar el repositorio e instalar todas las dependencias con `npm install`, existen dos comandos para levantar el proyecto.
 Para levantarlo en modo de desarrollo junto a nodemon, utilizar `npm run dev`. De lo contrario, para ejecutarlo en "modo producción", utilizar `npm start`
+
+## Deploy (temporal)
+http://des5-prellezose.herokuapp.com
